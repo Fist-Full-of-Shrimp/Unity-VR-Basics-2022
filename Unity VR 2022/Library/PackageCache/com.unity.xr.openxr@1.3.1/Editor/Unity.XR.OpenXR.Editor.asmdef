@@ -1,0 +1,36 @@
+{
+    "name": "Unity.XR.OpenXR.Editor",
+    "references": [
+        "GUID:e40ba710768534012815d3193fa296cb",
+        "GUID:f9fe0089ec81f4079af78eb2287a6163",
+        "GUID:4847341ff46394e83bb78fbd0652937e",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "",
+            "define": ""
+        },
+        {
+            "name": "com.unity.xr.management",
+            "expression": "3.2.0",
+            "define": "XR_MGMT_3_2_0_OR_NEWER"
+        },
+        {
+            "name": "com.unity.xr.management",
+            "expression": "[0.0.0,4.1.0]",
+            "define": "XR_MGMT_4_1_0_OR_OLDER"
+        }
+    ],
+    "noEngineReferences": false
+}

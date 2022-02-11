@@ -1,0 +1,9 @@
+{
+    "file_format_version": "1.0.0",
+    "runtime":
+    {
+        "api_version": "1.0",
+        "name": "Unity Mock Runtime",
+        "library_path": ".\\Windows\\x64\\openxr_loader.dll"
+    }
+}
