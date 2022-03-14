@@ -3,22 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-public class HandDirectInteractor : MonoBehaviour
+public class HandComplete : MonoBehaviour
 {
     //Stores handPrefab to be Instantiated
     public GameObject handPrefab;
-
+    //Allows for hiding of hand prefab if set to true
+    public bool hideHandOnSelect = false;
     //Stores what kind of characteristics we're looking for with our Input Device when we search for it later
     public InputDeviceCharacteristics inputDeviceCharacteristics;
-
 
     //Stores the InputDevice that we're Targeting once we find it in InitializeHand()
     private InputDevice _targetDevice;
     private Animator _handAnimator;
+    private SkinnedMeshRenderer _handMesh;
 
-
-
-
+    public void HideHandOnSelect()
+    {
+        if (hideHandOnSelect)
+        {
+            _handMesh.enabled = !_handMesh.enabled;
+        }
+    }
     private void Start()
     {
         InitializeHand();
@@ -39,7 +44,7 @@ public class HandDirectInteractor : MonoBehaviour
 
             GameObject spawnedHand = Instantiate(handPrefab, transform);
             _handAnimator = spawnedHand.GetComponent<Animator>();
-
+            _handMesh = spawnedHand.GetComponentInChildren<SkinnedMeshRenderer>();
         }
     }
 
