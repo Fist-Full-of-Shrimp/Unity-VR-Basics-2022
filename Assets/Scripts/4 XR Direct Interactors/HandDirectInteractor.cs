@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-public class Hand :  MonoBehaviour
+public class HandDirectInteractor : MonoBehaviour
 {
     //Stores handPrefab to be Instantiated
     public GameObject handPrefab;
@@ -11,9 +11,12 @@ public class Hand :  MonoBehaviour
     //Stores what kind of characteristics we're looking for with our Input Device when we search for it later
     public InputDeviceCharacteristics inputDeviceCharacteristics;
 
+
     //Stores the InputDevice that we're Targeting once we find it in InitializeHand()
     private InputDevice _targetDevice;
     private Animator _handAnimator;
+
+
 
 
     private void Start()
@@ -36,6 +39,7 @@ public class Hand :  MonoBehaviour
 
             GameObject spawnedHand = Instantiate(handPrefab, transform);
             _handAnimator = spawnedHand.GetComponent<Animator>();
+
         }
     }
 
