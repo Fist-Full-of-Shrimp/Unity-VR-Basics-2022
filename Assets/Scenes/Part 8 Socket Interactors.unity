@@ -3093,5 +3093,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mirror
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 193257642184871876, guid: 192f55aca22ec084daf86e216c371282, type: 3}
+    - {fileID: -4281617919334284389, guid: 192f55aca22ec084daf86e216c371282, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 192f55aca22ec084daf86e216c371282, type: 3}
