@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using Unity.XR.CoreUtils;
 public class CharacterControllerHMDUpdater : MonoBehaviour
 {
-    private XRRig xrRig;
+    private XROrigin xrRig;
     private CharacterController characterController;
     private CharacterControllerDriver driver;
 
     // Start is called before the first frame update
     void Start()
     {
-        xrRig = GetComponent<XRRig>();
+        xrRig = GetComponent<XROrigin>();
         characterController = GetComponent<CharacterController>();
         driver = GetComponent<CharacterControllerDriver>();
     }
@@ -22,7 +23,7 @@ public class CharacterControllerHMDUpdater : MonoBehaviour
         UpdateCharacterController();
     }
 
-    protected virtual void UpdateCharacterController()
+    void UpdateCharacterController()
     {
         if (xrRig == null || characterController == null)
             return;
