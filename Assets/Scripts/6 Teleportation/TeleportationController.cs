@@ -61,6 +61,7 @@ public class TeleportationController : MonoBehaviour
 
         //We grab this reference so we can use it to tell if the thumbstick is still being pressed
         _thumbstickInputAction = inputAction.FindActionMap("XRI " + targetController.ToString()).FindAction("Move");
+        _thumbstickInputAction.Enable();
     }
 
     private void OnDestroy()
