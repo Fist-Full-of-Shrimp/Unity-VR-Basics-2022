@@ -1,5 +1,3 @@
-
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +6,10 @@ using UnityEngine.InputSystem;
 //Allows us to use the Interaction Toolkit to enable and disable our rays
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class TeleportationController: MonoBehaviour
+public class TeleportationControllerFixed : MonoBehaviour
 {
     //Used to determine current active state of the Teleportation System
-    static private bool _teleportIsActive = false;
+    private static bool _teleportIsActive = false;
 
     //Creates an enum that will determine if we're using the right or left controller
     public enum ControllerType
@@ -80,6 +78,7 @@ public class TeleportationController: MonoBehaviour
     //If those pass, we make a teleportation request to the Teleport Provider
     void Update()
     {
+
         if (!_teleportIsActive)
         {
             return;
@@ -94,6 +93,13 @@ public class TeleportationController: MonoBehaviour
         }
         if (!rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit raycastHit))
         {
+            rayInteractor.enabled = false;
+            _teleportIsActive = false;
+            return;
+        }
+        if (raycastHit.collider.gameObject.tag != "Teleport")
+        {
+
             rayInteractor.enabled = false;
             _teleportIsActive = false;
             return;
