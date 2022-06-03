@@ -2039,7 +2039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1257a5852eaefd49bb72d64b7bfdb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetController: 0
+  targetController: 1
   inputAction: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   rayInteractor: {fileID: 1399236473}
   teleportationProvider: {fileID: 1379660454}
@@ -2083,7 +2083,7 @@ MonoBehaviour:
   m_InteractionLayers:
     m_Bits: 1
   m_SelectMode: 1
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 3641371925606271686, guid: 0f5f3d4f7f369374988018423d278284, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
