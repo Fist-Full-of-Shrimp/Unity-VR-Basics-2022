@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Button
+  - Teleport
   layers:
   - Default
   - TransparentFX

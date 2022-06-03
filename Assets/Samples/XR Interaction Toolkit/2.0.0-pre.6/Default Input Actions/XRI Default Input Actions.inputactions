@@ -793,7 +793,7 @@
                     "path": "<XRController>{RightHand}/Primary2DAxis",
                     "interactions": "Sector(directions=1)",
                     "processors": "",
-                    "groups": "Generic XR Controller",
+                    "groups": "Noncontinuous Move",
                     "action": "Teleport Mode Activate",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1081,6 +1081,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "UI Press Value",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1a1a55e5-ae91-4809-a761-93df33375bbc",
+                    "path": "<XRController>{RightHand}/primary2DAxis",
+                    "interactions": "",
+                    "processors": "StickDeadzone",
+                    "groups": "Continuous Move",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
