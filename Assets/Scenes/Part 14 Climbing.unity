@@ -1111,7 +1111,6 @@ GameObject:
   - component: {fileID: 1379660454}
   - component: {fileID: 1379660453}
   - component: {fileID: 1379660452}
-  - component: {fileID: 1379660457}
   m_Layer: 0
   m_Name: Locomotion System
   m_TagString: Untagged
@@ -1243,43 +1242,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1379660457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379660451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7b8403c3ee3824499a62a1bb3db9b67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterController: {fileID: 1836622552}
-  velocityRight:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Velocity Right
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: c0d03cfe-849e-4eba-bc88-647b25b660b6
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 2117681058648183160, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  velocityLeft:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Velocity Left
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: ec069714-fef4-4fc0-bdc9-2b8b00eebc9d
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 1162827136798843933, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &1693913818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,7 +1672,6 @@ GameObject:
   - component: {fileID: 1836622552}
   - component: {fileID: 1836622551}
   - component: {fileID: 1836622553}
-  - component: {fileID: 1836622554}
   m_Layer: 9
   m_Name: XR Origin
   m_TagString: Untagged
@@ -1796,18 +1757,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: 2
---- !u!114 &1836622554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1836622548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab16ccb3c0a36ab41bdc1c30eb728c54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1883406392
 GameObject:
   m_ObjectHideFlags: 0
