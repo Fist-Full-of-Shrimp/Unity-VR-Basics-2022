@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Button
   - Teleport
+  - Climbable
   layers:
   - Default
   - TransparentFX

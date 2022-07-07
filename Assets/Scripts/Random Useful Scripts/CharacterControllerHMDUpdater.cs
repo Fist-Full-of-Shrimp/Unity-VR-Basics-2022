@@ -5,35 +5,40 @@ using UnityEngine.XR.Interaction.Toolkit;
 using Unity.XR.CoreUtils;
 public class CharacterControllerHMDUpdater : MonoBehaviour
 {
-    private XROrigin xrRig;
-    private CharacterController characterController;
-    private CharacterControllerDriver driver;
+    public float gravity = 1f;
 
+    private XROrigin _xrRig;
+    private CharacterController _characterController;
+    private CharacterControllerDriver _driver;
+
+    private bool _climbing = false;
     // Start is called before the first frame update
     void Start()
     {
-        xrRig = GetComponent<XROrigin>();
-        characterController = GetComponent<CharacterController>();
-        driver = GetComponent<CharacterControllerDriver>();
-    }
+        _xrRig = GetComponent<XROrigin>();
+        _characterController = GetComponent<CharacterController>();
+        _driver = GetComponent<CharacterControllerDriver>();
 
+
+    }
     // Update is called once per frame
     void Update()
     {
-        UpdateCharacterController();
+       UpdateCharacterController();
     }
 
     void UpdateCharacterController()
     {
-        if (xrRig == null || characterController == null)
+        if (_xrRig == null || _characterController == null)
             return;
 
-        var height = Mathf.Clamp(xrRig.CameraInOriginSpaceHeight, driver.minHeight, driver.maxHeight);
+        var height = Mathf.Clamp(_xrRig.CameraInOriginSpaceHeight, _driver.minHeight, _driver.maxHeight);
 
-        Vector3 center = xrRig.CameraInOriginSpacePos;
-        center.y = height / 2f + characterController.skinWidth;
+        Vector3 center = _xrRig.CameraInOriginSpacePos;
+        center.y = height/3f + _characterController.skinWidth;
 
-        characterController.height = height;
-        characterController.center = center;
+        _characterController.height = height;
+        _characterController.center = center;
     }
+
 }
