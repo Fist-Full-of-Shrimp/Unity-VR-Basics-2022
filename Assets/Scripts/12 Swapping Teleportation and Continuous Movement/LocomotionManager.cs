@@ -13,6 +13,9 @@ public class LocomotionManager : MonoBehaviour
     private TeleportationProvider _teleportationProvider;
     private ActionBasedContinuousMoveProvider _continuousMoveProvider;
 
+    // A Unity bug was found when disabling our Teleportation/Continuous Move Providers. It will sometimes lose the reference to the
+    // Input Actions associated with them. As a bandaid fix, we'll just store a reference to them with these variables and reassign
+    // them when we set them to active.
     private InputActionReference _continuousMoveInputReference;
     private InputActionAsset _teleportationInputReference;
     // Start is called before the first frame update
